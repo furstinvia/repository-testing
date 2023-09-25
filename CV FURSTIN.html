@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>CV Furstin 234</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+   
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+	--primary-color: #bbaefb;
+	--text-color: #727171;
+}
+html {
+	font-size: 10px;
+}
+body {
+	background-color: white;
+	color: black;
+}
+
+/* common styles */
+img {
+	width: 110%;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+.description {
+	margin-top: 1rem;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: var(--text-color);
+}
+.title {
+	color: var(--primary-color);
+	font-weight: 700;
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+.item_preTitle {
+	font-size: 1.4rem;
+	color: var(--text-color);
+	font-weight: 400;
+}
+.item_title {
+	font-size: 1.6rem;
+	color: black;
+	font-weight: 700;
+	margin: 0.5rem 0;
+}
+.item_subtitle {
+	font-size: 1.5rem;
+	color: black;
+	font-weight: 500;
+}
+
+/* layouts */
+.container {
+	max-width: 1000px;
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	padding: 7rem;
+	background: white;
+	grid-template-columns: 1fr 1fr;
+	gap: 3rem;
+}
+@media only screen and (max-width: 768px) {
+	.container {
+		width: 100%;
+		grid-template-columns: 1fr;
+		padding: 3rem;
+		gap: 7rem;
+	}
+}
+.profile {
+	grid-column: 1 / -1;
+	margin-bottom: 2rem;
+}
+.group-1,
+.group-2 {
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+}
+
+@media only screen and (max-width: 768px) {
+	.profile {
+		margin-bottom: 0;
+	}
+	.group-3 {
+		flex-direction: column;
+	}
+}
+
+/* profile */
+.profile_container {
+	display: flex;
+	gap: 4rem;
+}
+.profile_profileImg {
+	max-width: 250px;
+}
+.profile_name {
+	color: black;
+	font-weight: 700;
+	display: block;
+    font-size: 4rem;
+	
+}
+.profile_name_firstName {
+	color: black;
+	font-weight: 200;
+	font-size: clamp(2rem, 8vw, 4rem);
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: -0.8rem;
+}
+.profile_name_lastName {
+	color: var(--primary-color);
+	font-weight: 700;
+	font-size: clamp(2.5rem, 15vw, 7rem);
+	text-transform: uppercase;
+	display: block;
+}
+.profile_title {
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+@media only screen and (max-width: 768px) {
+	.profile_container {
+		flex-direction: column;
+	}
+}
+
+/* Expertise */
+.skills_list {
+	margin-top: 1rem;
+	margin-left: 2rem;
+	line-height: 2;
+}
+
+/* Ref  */
+.ref_item {
+	margin-top: 2rem;
+}
+.ref_name {
+	font-size: 1.6rem;
+	font-weight: 700;
+}
+
+/* eduction */
+.edu_item {
+	margin-top: 2rem;
+}
+
+
+
+
+/* Interests */
+.interest_items {
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+.interest_item {
+	font-size: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	color: var(--text-color);
+}
+.interest_item svg {
+	width: 2rem;
+}
+
+
+
+hr {
+	grid-column: 1/-1;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 5rem;
+	margin-bottom: 1rem;
+	border: none;
+	border-top: 2px solid rgba(128, 128, 128, 0.229);
+}
+@media only screen and (max-width: 768px) {
+	hr {
+		margin: 0 auto;
+	}
+}
+/* Menentukan transisi untuk efek smooth */
+.profile_profileImg {
+            transition: transform 0.3s ease-in-out;
+        }
+        /* Efek hover untuk pembesaran gambar */
+        .profile_profileImg:hover {
+            transform: scale(1.1);
+            }
+
+/* Add this CSS for circular image */
+.circular-image {
+  border-radius: 50%; /* Makes the image circular */
+  overflow: hidden; /* Ensures the image stays within the circular shape */
+}
+
+
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="profile">
+      <div class="profile_container">
+        <div class="profile_profileImg">
+          <img src="img/fotocv2.jpg" alt="furstin aprilavia" class="circular-image">
+        </div>
+        <div>
+          <h1 class="profile_name">
+            Furstin Aprilavia Putri
+          </h1>
+          <p class="profile_title">Undergraduate Informatics Program</p>
+          <p class="description profile_description">
+            I am an Informatics Engineering student with an interest in
+technology from the Sepuluh Nopember Institute of Technology
+Surabaya. I am an organised, discipline and hard working person,
+and am willing to discover new ideas which can be put into
+practice effectively. I am a good listener and able to
+communicate well with a group and individual level. I have a high
+curiosity and I am a person who likes to try new things, especially
+in Computers and Information Technology.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="group-1" style="border-right: #bbaefb;">
+      <div class="skills">
+        <h3 class="title">C o n t a c t</h3>
+        <br>
+        <div class="contact_info">
+            <p class="description">
+              <a href="tel:+6287803915788" style="text-decoration: underline;">(+62) 878 0391 5788</a>
+            </p>
+            <p class="description">
+              <a href="mailto:furstinaptr@gmail.com" style="text-decoration: underline;">furstinaptr@gmail.com</a>
+            </p>
+            <p class="description">
+              <a href="https://maps.google.com/maps?q=Educity+Apartment" target="_blank" style="text-decoration: underline;" >Educity Apartement</a>
+            </p>
+          </div>
+      </div>
+      
+      <div class="edu">
+        <h3 class="title">E d u c a t i o n</h3>
+        <div class="edu_item">
+          <h4 class="item_title">Bachelor of Informatics
+            Engineering
+            </h4>
+          <p class="item_subtitle">
+            Institut Teknologi Sepuluh Nopember
+          </p>
+          <p class="item_preTitle">2022 - 2026</p>
+        </div>
+        <div class="edu_item">
+          <h4 class="item_title">Senior High School
+        </h4>
+          <p class="item_subtitle">
+            SMA Negeri 7 Surakarta
+          </p>
+          <p class="item_preTitle">2019 - 2022</p>
+        </div>
+      </div>
+
+      <div class="certification">
+        <h3 class="title">s k i l l s</h3>
+        <div class="certification_item">
+          <table class="borderless-table">
+            <tbody>
+                <tr>
+                    <td class="description" style="font-weight: 500;">Communication</td>
+                </tr>
+                <tr>
+                    <td class="description" style="font-weight: 500;">Teamwork</td>
+                </tr>
+                <tr>
+                    <td class="description" style="font-weight: 500;">Friendly</td>
+                </tr>
+                <tr>
+                    <td class="description" style="font-weight: 500;">Online Advertising</td>
+                </tr>
+                <tr>
+                    <td class="description" style="font-weight: 500;">Digital Marketing</td>
+                </tr>
+                <tr>
+                    <td class="description" style="font-weight: 500;">Social Services</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+    <div class="group-2">
+      <div class="exp">
+        <h3 class="title">E x p e r i e n c e</h3>
+        <br>
+        <div class="exp_item">
+          <h4 class="item_title">Schematics REEVA</h4>
+          <p class="item_subtitle">Staff of Supporting Events
+            </p>
+          <p class="item_preTitle">Feb 2023 - Present</p>
+          <p class=" description">
+            – Designing and creating an art expo for the 2023 REEVA concert
+event.
+<br>
+– Responsible for receiving and distributing donations obtained
+from the REEVA 2023 concert event.
+          </p>
+        </div>
+        <div class="exp_item">
+          <h4 class="item_title">SOLO ITS (SOLITS)
+        </h4>
+          <p class="item_subtitle">Staff of Creative Design</p>
+          <p class="item_preTitle">Nov 2022 - Feb 2023</p>
+          <p class="description">
+            – Create and distribute content ideas to be posted on social
+            media (Instagram reels and Tiktok) to promote ITS.
+            <br>
+            – Visiting schools in Solo to promote and introduce ITS.
+          </p>
+        </div>
+        <div class="exp_item">
+            <h4 class="item_title">UKM Technopreneurship Development Center (TDC) ITS
+          </h4>
+            <p class="item_subtitle">Members</p>
+            <p class="item_preTitle">Sept 2022 - Present</p>
+            <p class="description">
+                – Become the consumption committee during the TDC night
+                gathering.                
+              <br>
+              – Selling beverage products (milk) to develop the entrepreneurial
+spirit of students
+            </p>
+        </div>
+        <div class="exp_item">
+            <h4 class="item_title">Palang Merah Remaja (PMR)
+          </h4>
+            <p class="item_subtitle">Members</p>
+            <p class="item_preTitle">2019</p>
+            <p class="description">
+                – Become a health supervisor at various events at school to
+monitor sick students.                
+              <br>
+              – Always ready and fully responsible for providing assistance in
+any form to others.
+            </p>
+        </div>
+      </div>
+    
+
+      <div class="interest">
+        <h3 class="title">L a n g u a g e s</h3>
+        <div class="interest_items">
+          <div class="interest_item">
+            <div class="row">
+                <div class="col-sm-4 p-4" style="margin-right: 1px;">Bahasa</div>
+                <div class="col-sm-8 p-4" style="margin-left: 1px;">English</div>
+            </div>
+          </div>
+    
+        </div>
+
+      </div>
+    </div>
+    <hr>
+    
+   <!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/fixfoto1.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+      <div class="carousel-caption">
+        <h3>Publication Schematics </h3>
+        <p>Publish Schematics Poster in Solo</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/fixfoto2.jpg" alt="Chicago" class="d-block" style="width:100%">
+      <div class="carousel-caption">
+        <h3>Schematics REEVA</h3>
+        <p>Selling Schematics Reeva tickets at Cosplay Events</p>
+      </div> 
+    </div>
+    <div class="carousel-item">
+      <img src="img/fixfoto3.jpg" alt="New York" class="d-block" style="width:100%">
+      <div class="carousel-caption">
+        <h3>SOLITS</h3>
+        <p>Become a Speaker to Promote ITS</p>
+      </div>  
+    </div>
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div> 
+</body>
+
+
+</html>
